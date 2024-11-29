@@ -255,15 +255,18 @@ def main() -> None:
         )
 
         print(f"Iteration {iteration_number}: Execution Time: {execution_time} microseconds")
+        output_issue= False
         if execution_error:
             prev_iteration_execution_error = execution_error
             print(f"Error during execution: {error}")
         elif reference_results != output and not execution_error:
             print("Output mismatch error:", error)
+            output_issue = True
         results.append({
             "iteration": iteration_number,
             "execution_time": execution_time,
-            "execution_error": execution_error
+            "execution_error": execution_error,
+            "output_issue": output_issue
         })
         iteration_number += 1
         steps -= 1
