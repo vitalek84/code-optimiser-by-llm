@@ -14,7 +14,7 @@ The primary script runs code in a subprocess, gathers execution metrics
    ```
 2. **Install dependencies:**
    ```bash
-   pip install -r requirements
+   pip install -r requirements.txt
    ```
 3. **Set up API keys for the desired LLMs:**
    ```bash
